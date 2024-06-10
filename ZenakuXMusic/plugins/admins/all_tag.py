@@ -31,7 +31,7 @@ async def tag_all_users(_, message):
             if message.user.mention not in SPAM_CHATS:
                 break
             usernum += 1
-            usertxt += "{user.mention}"
+            usertxt += f"\n⊚ {m.user.mention}\n"
             if usernum == 3:
                 await replied.reply_text(usertxt)
                 await asyncio.sleep(3)
@@ -51,7 +51,7 @@ async def tag_all_users(_, message):
             if message.user.mention not in SPAM_CHATS:
                 break
             usernum += 1
-            usertxt +="{user.mention}"
+            usertxt +=f"\n⊚ {m.user.mention}\n"
             if usernum == 3:
                 await app.send_message(
                     message.user.mention,
