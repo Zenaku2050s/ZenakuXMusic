@@ -27,8 +27,8 @@ async def tag_all_users(_, message):
         SPAM_CHATS.append(message.chat.id)
         usernum = 0
         usertxt = ""
-        async for m in app.get_chat_members(message.chat.id):
-            if message.chat.id not in SPAM_CHATS:
+        async for m in app.get_chat_members(message.user.mention):
+            if message.user.mention not in SPAM_CHATS:
                 break
             usernum += 1
             usertxt += "{user.mention}"
@@ -44,24 +44,24 @@ async def tag_all_users(_, message):
     else:
         text = message.text.split(None, 1)[1]
 
-        SPAM_CHATS.append(message.chat.id)
+        SPAM_CHATS.append(message.user.mention)
         usernum = 0
         usertxt = ""
-        async for m in app.get_chat_members(message.chat.id):
-            if message.chat.id not in SPAM_CHATS:
+        async for m in app.get_chat_members(message.user.mention):
+            if message.user.mention not in SPAM_CHATS:
                 break
             usernum += 1
             usertxt +="{user.mention}"
             if usernum == 3:
                 await app.send_message(
-                    message.chat.id,
-                    f"{text}\n{usertxt}\n\n|| ➥ ᴏғғ ᴛᴀɢɢɪɴɢ ʙʏ » /cancel ||",
+                    message.user.mention,
+                    f"{usertxt}\n\n|| ➥ ᴏғғ ᴛᴀɢɢɪɴɢ ʙʏ » /cancel ||",
                 )
                 await asyncio.sleep(3)
                 usernum = 0
                 usertxt = ""
         try:
-            SPAM_CHATS.remove(message.chat.id)
+            SPAM_CHATS.remove(message.user.mention)
         except Exception:
             pass
 
@@ -86,8 +86,8 @@ async def tag_all_users(_, message):
     & admin_filter
 )
 async def cancelcmd(_, message):
-    chat_id = message.chat.id
-    if chat_id in SPAM_CHATS:
+    user_mention = message.user.mention
+    if user_mention in SPAM_CHATS:
         try:
             SPAM_CHATS.remove(chat_id)
         except Exception:
