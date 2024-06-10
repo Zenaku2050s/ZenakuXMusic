@@ -19,6 +19,7 @@ requests
 speedtest-cli
 spotipy
 tgcrypto
+telegraph==2.2.0
 unidecode
 yt-dlp
 youtube-search
