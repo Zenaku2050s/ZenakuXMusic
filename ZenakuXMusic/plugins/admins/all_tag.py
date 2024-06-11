@@ -82,7 +82,7 @@ async def tag_all_users(_, message):
             "cancelall",
             "allcancel",
         ],
-        prefixes=["/", "@", "#"],
+        prefixes=["@", "."],
     )
     & admin_filter
 )
@@ -93,7 +93,7 @@ async def cancelcmd(_, message):
             SPAM_CHATS.remove(chat_id)
         except Exception:
             pass
-        return await message.reply_text("✦ᴛᴀɢɢɪɴɢ ᴘʀᴏᴄᴇss sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴏᴘᴘᴇᴅ✦")
+        return await message.reply_text("ᴘʀᴏᴄᴇss sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴏᴘᴘᴇᴅ")
 
     else:
         await message.reply_text("✦ɴᴏ ᴘʀᴏᴄᴇss ᴏɴɢᴏɪɴɢ✦")
