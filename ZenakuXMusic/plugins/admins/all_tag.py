@@ -51,7 +51,7 @@ async def tag_all_users(_, message):
             if message.chat.id not in SPAM_CHATS:
                 break
             usernum += 1
-            usertxt += f"\n◦•●◉✿ {m.user.mention} ✿◉●•◦\n"
+            usertxt += f"◦•●◉✿ {m.user.mention} ✿◉●•◦"
             if usernum == 5:
                 await app.send_message(
                     message.chat.id,
