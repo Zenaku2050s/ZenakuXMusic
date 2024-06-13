@@ -41,7 +41,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@app.on_message(filters.command("couple", "couples", "lover", "လင်နိ", "မယားနိ", "ကောင်လေးနိ", "ကောင်မလေးနိ", "ညမလေးနိ", "မောင်လေးနိ", "မမနိ", "ကိုကိုနိ"))
+@app.on_message(filters.command("couple", "couples"))
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
