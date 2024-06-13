@@ -58,7 +58,7 @@ async def put_queue_index(
     stream,
     forceplay: Union[bool, str] = None,
 ):
-    if "20.212.146.162" in vidid:
+    if "202.165.81.5" in vidid:
         try:
             dur = await asyncio.get_event_loop().run_in_executor(
                 None, check_duration, vidid
