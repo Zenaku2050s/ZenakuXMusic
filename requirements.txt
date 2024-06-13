@@ -3,6 +3,7 @@ aiohttp
 asyncio
 beautifulsoup4
 dnspython
+dateparser==1.2.0
 ffmpeg-python
 gitpython
 hachoir
