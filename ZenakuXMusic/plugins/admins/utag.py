@@ -42,7 +42,7 @@ async def tag_all_users(_, message):
                 if m.user.is_bot:
                     continue
                 usernum += 1
-                usertxt += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
+                usertxt += f"🫧 {m.user.mention} "
                 if usernum == 5:
                     await app.send_message(
                         message.chat.id,
