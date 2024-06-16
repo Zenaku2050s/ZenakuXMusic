@@ -9,13 +9,13 @@ def ids(_, message):
         button = InlineKeyboardButton(" ᴄʟᴏsᴇ ", callback_data="close")
         markup = InlineKeyboardMarkup([[button]])
         message.reply_text(
-            f"User {reply.from_user.first_name} ID is : {reply.from_user.id}",
+            f"**Your ID**: `{message.from_user.id}`\n**{reply.from_user.first_name}'s ID**: `{reply.from_user.id}`\n**Chat ID**: `{message.chat.id}'",
             reply_markup=markup
         )
     else:
         button = InlineKeyboardButton(" ᴄʟᴏsᴇ ", callback_data="close")
         markup = InlineKeyboardMarkup([[button]])
         message.reply(
-           f"ᴛʜɪs ɢʀᴏᴜᴩ's ɪᴅ ɪs: {message.chat.id}",
+           f"**Your id**: `{message.from_user.id}`\n**chat id**: `{message.chat.id}`",
            reply_markup=markup
         )
