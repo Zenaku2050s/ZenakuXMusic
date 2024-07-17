@@ -60,10 +60,10 @@
     },
     "buildpacks": [
           {
-              "url": "heroku/python"
+              "url": "koyeb/python"
           },
           {
-              "url": "heroku/nodejs"
+              "url": "koyeb/nodejs"
           },
           {
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
