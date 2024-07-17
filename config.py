@@ -43,8 +43,17 @@ SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/seriousvs_version20")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/seriousvs_version10")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", True))
+AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", false))
 
+# Time after which bot will suggest random chats about bot commands.
+AUTO_SUGGESTION_TIME = int(
+    getenv("AUTO_SUGGESTION_TIME", "1")
+)  # Remember to give value in Seconds
+
+# Set it True if you want to bot to suggest about bot commands to random
+# chats of your bots.
+AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "True")
+# Cleanmode time after which bot will delete its old messages from chat
 
 # Get this credentials from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "30ad59d1a75e4eea9d7efb89d52fc082")
