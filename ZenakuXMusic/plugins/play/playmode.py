@@ -10,7 +10,7 @@ from config import BANNED_USERS
 
 @app.on_message(
     filters.command(
-        ["playmode", "mode"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]
+        ["playmode", "mode"], prefixes=["/", ""]
     )
     & filters.group
     & ~BANNED_USERS
