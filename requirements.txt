@@ -26,5 +26,3 @@ yt-dlp
 youtube-search
 youtube-search-python
 telethon==1.24.0
-flask
-flask_restful
