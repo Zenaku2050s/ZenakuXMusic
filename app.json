@@ -59,7 +59,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1002055407973",
+        "value": "-1002011820973",
         "required": true
       }
     },
